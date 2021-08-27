@@ -1,15 +1,15 @@
 """
-Script which submits xrd data to database. To run the script:
-xrd_refinementToDB.py <dir> <dried and sealed (y/n)> <temperature>
+Script which submits xrd data (fitparams.txt, and .xy files) to database. 
+To run the script:
+
+xrd_refinementToDB.py <dir> <dried and sealed (1/0)> <temperature>
 
 <dir> = directory for refinement results files. Can be '.' or a specific folder.
 <dried and sealed (1/0)> = 1 or 0  (integers)
-<temperature> = sealing and drying temperature (integer)
+<temperature> = sealing and drying temperature in Celsius (integer)
 """
 
-from numpy.core.numeric import zeros_like
 from tomocatdb.data_model import *
-import numpy as np
 import sqlalchemy as sq
 from sqlalchemy.orm import Session
 import os

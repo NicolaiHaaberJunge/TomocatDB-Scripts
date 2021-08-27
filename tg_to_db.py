@@ -1,14 +1,14 @@
 """
-Script which submits xrd data to database. To run the script:
+Script which submits tg data from the Netszch TGA/DSC
+to a database. To run the script: 
+
 xrd_refinementToDB.py <dir> <coke>
 
 <dir> = directory for refinement results files. Can be '.' or a specific folder.
 <coke> = coke (Optional, type "coke" if the sample contains coke)
 """
 
-from numpy.core.numeric import zeros_like
 from tomocatdb.data_model import *
-import numpy as np
 import sqlalchemy as sq
 from sqlalchemy.orm import Session
 import os
