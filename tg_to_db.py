@@ -2,7 +2,7 @@
 Script which submits tg data from the Netszch TGA/DSC
 to a database. To run the script: 
 
-xrd_refinementToDB.py <dir> <coke>
+python tg_to_db.py <dir> <coke>
 
 <dir> = directory for refinement results files. Can be '.' or a specific folder.
 <coke> = coke (Optional, type "coke" if the sample contains coke)
